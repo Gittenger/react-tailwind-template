@@ -41,7 +41,8 @@ const PostCSSLoader = {
 }
 
 module.exports = {
-  entry: './src/index.js',
+  // need this for async/await
+  entry:[  'regenerator-runtime/runtime.js', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
